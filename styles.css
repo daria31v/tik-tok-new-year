@@ -1,11 +1,11 @@
 body {
-  background-color: #f4f0f0cc;
+  background-color: rgba(244, 250, 249, 0.937);
   display: block;
   justify-content: center;
   align-items: center;
-  background-image: url(./elka.png);
+  background-image: url(./christmas_tree.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 95%;
   background-position: inherit;
   font-family: cursive;
 }
