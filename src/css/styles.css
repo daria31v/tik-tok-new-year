@@ -1,0 +1,66 @@
+body {
+  background-color: #f4f0f0cc;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/elka.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: cursive;
+}
+.container__title {
+  font-size: 26px;
+  max-width: 696px;
+  color: #ffffff;
+  line-height: 1.62;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.timer-box {
+  color: #212121;
+  margin-left: 350px;
+  display: flex;
+}
+
+.timer {
+  margin-top: 50px;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  color: #2b97e9;
+  /* text-shadow: 0 6px #e9e22b; */
+  /* font-size: 31px; */
+}
+
+button {
+  background-color: #00ccff;
+  border-color: #e9e22b;
+}
+
+.field {
+  display: inline-block;
+  gap: 30px;
+  width: 100px;
+  height: 80px;
+  border: 1px #cecbcd;
+  margin-right: 30px;
+  background: rgb(252, 210, 44);
+  box-shadow: 4px 8px 40px rgb(8, 24, 111, 0.2);
+  border-radius: 30px;
+}
+.value {
+  font-size: 20px;
+}
+.label {
+  font-size: 20px;
+}
