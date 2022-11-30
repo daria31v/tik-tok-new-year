@@ -1,10 +1,9 @@
 
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 
 
 // import NewsApiService from './new-api-service';
-
 
 const refs = {
     btnEl: document.querySelector('[data-start]'),

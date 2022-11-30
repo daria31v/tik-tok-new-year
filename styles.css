@@ -6,12 +6,11 @@ body {
   background-image: url(./elka.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: inherit;
   font-family: cursive;
 }
 .container__title {
   font-size: 26px;
-  max-width: 696px;
   color: #ffffff;
   line-height: 1.62;
   text-transform: uppercase;
@@ -26,41 +25,64 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+.title {
+  font-size: 45px;
+  font-weight: 900;
+  padding-left: 530px;
+  padding-top: 100px;
+  color: #248562;
+  text-shadow: 1px 3px #e077c6;
+}
 .timer-box {
-  color: #212121;
-  margin-left: 350px;
+  color: #248562;
+  margin-left: 470px;
   display: flex;
 }
 
 .timer {
-  margin-top: 50px;
-  gap: 30px;
   justify-content: space-between;
   align-items: center;
-  color: #2b97e9;
-  /* text-shadow: 0 6px #e9e22b; */
-  /* font-size: 31px; */
+  color: #87edcd;
+  text-shadow: 1px 6px #e4f0f7;
 }
 
 button {
-  background-color: #00ccff;
-  border-color: #e9e22b;
+  width: 150px;
+  height: 70px;
+  margin-left: 800px;
+  margin-top: 100px;
+  background-color: rgb(252, 210, 44);
+  font-size: 35px;
+  text-shadow: 1px 3px #e077c6;
+  border: 1px #cecbcd;
+  box-shadow: 1px 8px 40px rgb(197, 81, 116), 1px 8px 40px rgb(252, 210, 44);
+  border-radius: 30px;
+  font-family: cursive;
 }
 
 .field {
   display: inline-block;
-  gap: 30px;
-  width: 100px;
-  height: 80px;
+  width: 150px;
+  height: 100px;
   border: 1px #cecbcd;
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-top: 70px;
   background: rgb(252, 210, 44);
-  box-shadow: 4px 8px 40px rgb(8, 24, 111, 0.2);
+  box-shadow: 1px 8px 40px rgb(197, 81, 116);
   border-radius: 30px;
 }
 .value {
-  font-size: 20px;
+  font-size: 35px;
+  text-align: center;
 }
 .label {
   font-size: 20px;
+  text-align: center;
+}
+.size {
+  display: block;
+  width: 150px;
+  height: 30px;
+  padding-top: 5px;
+  text-align: center;
 }
