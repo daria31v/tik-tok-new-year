@@ -10,7 +10,7 @@ body {
   font-family: cursive;
 }
 .container__title {
-  font-size: 26px;
+  font-size: 20px;
   color: #ffffff;
   line-height: 1.62;
   text-transform: uppercase;
@@ -49,7 +49,7 @@ body {
 
 .btn {
   width: 150px;
-  height: 70px;
+  height: 100px;
   margin-left: 800px;
   margin-top: 100px;
   background-color: rgb(252, 210, 44);
@@ -77,7 +77,7 @@ body {
   height: 100px;
   border: 1px #cecbcd;
   margin-right: 15px;
-  margin-top: 70px;
+  margin-top: 40px;
   background: rgb(252, 210, 44);
   box-shadow: 1px 8px 40px rgb(197, 81, 116);
   border-radius: 30px;
