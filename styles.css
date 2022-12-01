@@ -46,18 +46,28 @@ body {
   text-shadow: 1px 6px #e4f0f7;
 }
 
-button {
+.btn {
   width: 150px;
   height: 70px;
   margin-left: 800px;
   margin-top: 100px;
   background-color: rgb(252, 210, 44);
   font-size: 35px;
-  text-shadow: 1px 3px #e077c6;
+  text-shadow: 1px 3px #e886d0;
   border: 1px #cecbcd;
   box-shadow: 1px 8px 40px rgb(197, 81, 116), 1px 8px 40px rgb(252, 210, 44);
   border-radius: 30px;
   font-family: cursive;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #f00865;
+}
+
+.btn:active {
+  background-color: #cc5272;
+  box-shadow: 0 5px rgb(218, 202, 21);
+  transform: translateY(4px);
 }
 
 .field {
