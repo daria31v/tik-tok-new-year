@@ -3,7 +3,7 @@ body {
   display: block;
   justify-content: center;
   align-items: center;
-  background-image: url(./img/christmas_tree.png);
+  background-image: url(/img/christmas_tree.png);
   background-repeat: no-repeat;
   background-size: 1200px 600px;
   background-position: inherit;
@@ -30,7 +30,7 @@ body {
 .title {
   font-size: 40px;
   font-weight: 900;
-  padding-left: 515px;
+  padding-left: 510px;
   padding-top: 100px;
   color: #248562;
   text-shadow: 1px 3px #e077c6;
