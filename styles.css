@@ -5,18 +5,19 @@ body {
   align-items: center;
   background-image: url(./christmas_tree.png);
   background-repeat: no-repeat;
-  background-size: 95%;
+  background-size: 1200px 600px;
   background-position: inherit;
-  font-family: cursive;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #f0feff;
 }
 .container__title {
   font-size: 20px;
-  color: #ffffff;
+
   line-height: 1.62;
   text-transform: uppercase;
-  font-weight: 900;
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.3em;
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
@@ -27,16 +28,16 @@ body {
   margin-left: auto;
 }
 .title {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 900;
-  padding-left: 530px;
+  padding-left: 550px;
   padding-top: 100px;
   color: #248562;
   text-shadow: 1px 3px #e077c6;
 }
 .timer-box {
   color: #248562;
-  margin-left: 470px;
+  margin-left: 520px;
   display: flex;
 }
 
@@ -47,11 +48,38 @@ body {
   text-shadow: 1px 6px #e4f0f7;
 }
 
+.field {
+  display: inline-block;
+  width: 120px;
+  height: 90px;
+  border: 1px #cecbcd;
+  margin-right: 15px;
+  margin-top: 25px;
+  background: rgb(252, 210, 44);
+  box-shadow: 1px 8px 40px rgb(197, 81, 116);
+  border-radius: 30px;
+}
+.value {
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.label {
+  padding-top: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size {
+  display: block;
+  font-weight: 800;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
 .btn {
-  width: 150px;
-  height: 100px;
+  width: 120px;
+  height: 90px;
   margin-left: 800px;
-  margin-top: 100px;
+  margin-top: 80px;
   background-color: rgb(252, 210, 44);
   font-size: 35px;
   text-shadow: 1px 3px #e886d0;
@@ -69,31 +97,4 @@ body {
   background-color: #cc5272;
   box-shadow: 0 5px rgb(218, 202, 21);
   transform: translateY(4px);
-}
-
-.field {
-  display: inline-block;
-  width: 150px;
-  height: 100px;
-  border: 1px #cecbcd;
-  margin-right: 15px;
-  margin-top: 40px;
-  background: rgb(252, 210, 44);
-  box-shadow: 1px 8px 40px rgb(197, 81, 116);
-  border-radius: 30px;
-}
-.value {
-  font-size: 35px;
-  text-align: center;
-}
-.label {
-  font-size: 20px;
-  text-align: center;
-}
-.size {
-  display: block;
-  width: 150px;
-  height: 30px;
-  padding-top: 5px;
-  text-align: center;
 }
