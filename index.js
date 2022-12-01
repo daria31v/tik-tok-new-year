@@ -22,37 +22,37 @@ const day = hour * 24;
 refs.giftBtn.addEventListener('click', onStart);
 
 function onStart() {
-    setInterval(timerCount, 1000)
+    //  let idInterval = null;
+        let idInterval = setInterval(() => {
+            const newYear = new Date('Jan 1 2023 00:00:00')     
+            console.log(newYear)    
+            const startTime = Date.now()
+            console.log(startTime)
+        let lefUntil = newYear - startTime;
+        const timeOnDisplay = convertMs(lefUntil);
+                                                
+        refs.daysEl.textContent = addLeadingZero(timeOnDisplay.days);
+        refs.hoursEl.textContent = addLeadingZero(timeOnDisplay.hours);
+        refs.minutesEl.textContent = addLeadingZero(timeOnDisplay.minutes);
+        refs.secondsEl.textContent = addLeadingZero(timeOnDisplay.seconds);
+       
+        let endTime = refs.daysEl.textContent + refs.hoursEl.textContent + refs.minutesEl.textContent + refs.secondsEl.textContent;
+                 console.log(endTime)   
+
+        if (endTime === '00000000'){
+        clearInterval(idInterval);
+        alert ('🎄 З НОВИМ РОКОМ!!! ГОЙДА ДІСТАВАТИ ПОДАРУНКИ!!!');
+        return
+        }
+
+    }, 1000);
 };
-
-const timerCount = (() => {
-    const newYear = new Date('Jan 1 2023 00:00:00')      
-    const startTime = Date.now();
-    let lefUntil = newYear - startTime;
-    const timeOnDisplay = convertMs(lefUntil);
-                                              
-    refs.daysEl.textContent = addLeadingZero(timeOnDisplay.days);
-    refs.hoursEl.textContent = addLeadingZero(timeOnDisplay.hours);
-    refs.minutesEl.textContent = addLeadingZero(timeOnDisplay.minutes);
-    refs.secondsEl.textContent = addLeadingZero(timeOnDisplay.seconds);
-
-    if (startTime === newYear) {
-        alert ('🎄 З НОВИМ РОКОМ!!! ГОЙДА ДІСТАВАТИ ПОДАРУНКИ!!!')
-    }
-
-});
 
 function convertMs(lefUntil) {
     const days = Math.floor(lefUntil / day);
-    console.log(days)
-
     const hours = Math.floor((lefUntil % day) / hour);
-    console.log(hours)
-
     const minutes = Math.floor(((lefUntil % day) % hour) / minute);
-    console.log(minutes)
     const seconds = Math.floor((((lefUntil % day) % hour) % minute) / second);
-    console.log(seconds)
     return { days, hours, minutes, seconds };
 };
     
