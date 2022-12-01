@@ -1,89 +1,57 @@
 
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-
-
 // import NewsApiService from './new-api-service';
 
 const refs = {
-    btnEl: document.querySelector('[data-start]'),
     timerContainer: document.querySelector('.timer'),
+    
     fieldEl: document.querySelector('.field'),
-    daysEl: document.querySelector('[data-days]'),
-    hoursEl: document.querySelector('[data-hours]'),
-    minutesEl: document.querySelector('[data-minutes]'),
-    secondsEl: document.querySelector('[data-seconds]'),
+    daysEl: document.querySelector('.days'),
+    hoursEl: document.querySelector('.hours'),
+    minutesEl: document.querySelector('.minutes'),
+    secondsEl: document.querySelector('.seconds'),
+    giftBtn: document.querySelector('.btn'),
 } 
 
-const options = {
-    enableTime: true,
-    time_24hr: true,
-    defaultDate: new Date(),
-    minuteIncrement: 1,
+const second = 1000;
+const minute = second * 60;
+const hour = minute * 60;
+const day = hour * 24;
 
-    onClose(selectedDates) {
-        refs.btnEl.disabled = true;
-        let newData = new Date(selectedDates[0]);
-        const nowDate = Date.now();
-       
-        refs.userDate.disabled = true;
-        refs.btnEl.disabled = false;   
-        refs.btnEl.addEventListener('click', () => {
-            let idInterval = null;
-            refs.btnEl.disabled = true;
-             
-            idInterval = setInterval(() => {
-                const currentTime = new Date();
-          
-                let timeMs = newData - currentTime;
-                const timeOnDisplay = convertMs(timeMs);
+refs.giftBtn.addEventListener('click', onStart);
+
+function onStart() {
+    setInterval(timerCount, 1000)
+};
+
+const timerCount = (() => {
+    const newYear = new Date('Jan 1 2023 00:00:00')      
+    const startTime = Date.now();
+    let lefUntil = newYear - startTime;
+    const timeOnDisplay = convertMs(lefUntil);
                                               
-                refs.daysEl.textContent = addLeadingZero(timeOnDisplay.days);
-                refs.hoursEl.textContent = addLeadingZero(timeOnDisplay.hours);
-                refs.minutesEl.textContent = addLeadingZero(timeOnDisplay.minutes);
-                refs.secondsEl.textContent = addLeadingZero(timeOnDisplay.seconds);
+    refs.daysEl.textContent = addLeadingZero(timeOnDisplay.days);
+    refs.hoursEl.textContent = addLeadingZero(timeOnDisplay.hours);
+    refs.minutesEl.textContent = addLeadingZero(timeOnDisplay.minutes);
+    refs.secondsEl.textContent = addLeadingZero(timeOnDisplay.seconds);
 
-                let endTime = refs.daysEl.textContent + refs.hoursEl.textContent + refs.minutesEl.textContent + refs.secondsEl.textContent;
-                
+});
 
-                if (endTime === '00000000'){
-                    refs.btnEl.disabled = false;
-                    refs.userDate.disabled = false;
-                    clearInterval(idInterval);
-                    Notify.info("Time's up. Choose another date");
-                    return;
-                }
+function convertMs(lefUntil) {
+    const days = Math.floor(lefUntil / day);
+    console.log(days)
 
-            }, 1000);
-        });
-    } 
-}   
-           
+    const hours = Math.floor((lefUntil % day) / hour);
+    console.log(hours)
 
-
-function convertMs(timeMs) {
-  // Number of milliseconds per unit of time
-  const second = 1000;
-  const minute = second * 60;
-  const hour = minute * 60;
-  const day = hour * 24;
-
-
-  // Remaining days
-  const days = Math.floor(timeMs / day);
-  // Remaining hours
-  const hours = Math.floor((timeMs % day) / hour);
-  // Remaining minutes
-  const minutes = Math.floor(((timeMs % day) % hour) / minute);
-  // Remaining seconds
-  const seconds = Math.floor((((timeMs % day) % hour) % minute) / second);
-    
+    const minutes = Math.floor(((lefUntil % day) % hour) / minute);
+    console.log(minutes)
+    const seconds = Math.floor((((lefUntil % day) % hour) % minute) / second);
+    console.log(seconds)
     return { days, hours, minutes, seconds };
+};
     
-      
-}
-
 function addLeadingZero(value) {
     return value.toString().padStart(2, "0")
-}
-
+};
