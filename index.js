@@ -22,12 +22,12 @@ const day = hour * 24;
 refs.giftBtn.addEventListener('click', onStart);
 
 function onStart() {
-    //  let idInterval = null;
-        let idInterval = setInterval(() => {
+     let idInterval = null;
+        idInterval = setInterval(() => {
             const newYear = new Date('Jan 1 2023 00:00:00')     
-            console.log(newYear)    
+            // console.log(newYear)    
             const startTime = Date.now()
-            console.log(startTime)
+            // console.log(startTime)
         let lefUntil = newYear - startTime;
         const timeOnDisplay = convertMs(lefUntil);
                                                 
@@ -37,7 +37,7 @@ function onStart() {
         refs.secondsEl.textContent = addLeadingZero(timeOnDisplay.seconds);
        
         let endTime = refs.daysEl.textContent + refs.hoursEl.textContent + refs.minutesEl.textContent + refs.secondsEl.textContent;
-                 console.log(endTime)   
+                //  console.log(endTime)   
 
         if (endTime === '00000000'){
         clearInterval(idInterval);
