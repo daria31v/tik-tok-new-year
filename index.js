@@ -36,6 +36,10 @@ const timerCount = (() => {
     refs.minutesEl.textContent = addLeadingZero(timeOnDisplay.minutes);
     refs.secondsEl.textContent = addLeadingZero(timeOnDisplay.seconds);
 
+    if (startTime === newYear) {
+        alert ('🎄 З НОВИМ РОКОМ!!! ГОЙДА ДІСТАВАТИ ПОДАРУНКИ!!!')
+    }
+
 });
 
 function convertMs(lefUntil) {
