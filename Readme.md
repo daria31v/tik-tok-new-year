@@ -7,3 +7,6 @@ Illustration: @moskot.art (https://www.behance.net/onikiyjulia?fbclid=PAAaYapJEt
 
 ## Usade:
 Live Services
+
+## Activation of counter:
+Press on 🎁 
