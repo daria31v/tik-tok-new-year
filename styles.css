@@ -14,7 +14,7 @@ body {
 .container__title {
   font-size: 20px;
   line-height: 1.62;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   letter-spacing: 0.3em;
   margin-left: auto;
